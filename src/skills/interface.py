@@ -3,8 +3,8 @@ from interface import Interface
 
 class SkillInterface(Interface):
     
-    #name = "SkillInterface"
-    #invocation_name = "THIS SHOULD NEVER BE INVOKED."
+    def launch(self):
+        pass
 
     def launch(self, state):
         """
@@ -17,7 +17,3 @@ class SkillInterface(Interface):
 
     def query(self, prompt):
         raise Exception("Interface method not implemented")
-
-    def exit_routine(self):
-        raise Exception("Interface method not implemented")
-

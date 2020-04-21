@@ -2,7 +2,7 @@ import json, os
 from warnings import warn
 from interface import implements
 
-from src.skills import skills
+from src.skills import skills, EXIT_CODE, SUCCESS_CODE
 from src.skills.interface import SkillInterface
 
 
@@ -57,17 +57,22 @@ class Chatbot():
         Returns (String) text response back to the user's prompt.
         """
         #TODO we should also parse out special characters, and some words/tokens.
-        #TODO call sentiment analysis API and update 'feeling' state
+        #TODO call sentiment analysis API and update 'feeling' state on each call to query.
         prompt = prompt.lower()
+        #if a skill is active, redirect query to the skill
         if self.active_skill is not None:
-            response = self.active_skill.query(prompt)
+            response, code = self.active_skill.query(prompt)
+            #skill finished execution
+            if code == EXIT_CODE:
+                self.active_skill = None
+        #no skill is active display help message for all available skills.
         elif prompt == 'help':
             response = get_functionality()
         elif (skill := skills.invocation_names.get(prompt)) is not None:
-            self.active_skill = skill(self.state)
-            response = self.active_skill.launch()
+            self.active_skill = skill
+            response = self.active_skill.launch(self.state)
         else:
-            warn('General chatbot not yet implemented!')
+            warn('General chatbot not yet implemented!') #TODO
             response = "I'm not smart enough to understand. Please donate coffee to the developers. Thanks! OwO"
         return response
 
@@ -76,6 +81,6 @@ class Chatbot():
         If a skill is active, exits the skill to return to main. Else, exits the main handler and stores the current state into state_path json file.
         """
         #save state
-        with open(state_path, 'w') as state_file:
+        with open(self.state_path, 'w') as state_file:
             json.dump(self.state, state_file)
         return

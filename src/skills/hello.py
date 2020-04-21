@@ -1,5 +1,6 @@
 from interface import implements
 
+from src.skills import EXIT_CODE, SUCCESS_CODE
 from src.skills.interface import SkillInterface
 
 class HelloSkill(implements(SkillInterface)):
@@ -13,14 +14,12 @@ class HelloSkill(implements(SkillInterface)):
         return starting_prompt
 
     def get_functionality(self):
-        return "HelloSkill welcomes a new user to the sytem. "
+        return "HelloSkill welcomes a new user to the sytem. Please type your name."
 
     def query(self, prompt):
         #only expects to get a user response
         self.state['username'] = prompt
-        return 'Nice to meet you {}'.format(prompt) 
-
-    def exit_routine(self):
-        #Hello skill ends with a general prompt to continue engaging the user in conversation.
-        exit_message = "How are you?"
-        return exit_routine
+        #end response with a conversation hook
+        response = 'Nice to meet you {}. '.format(prompt) + 'How are you?'
+        return response, EXIT_CODE
+                
