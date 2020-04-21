@@ -2,6 +2,9 @@ import argparse
 
 from src.chatbot.engine import Chatbot
 
+ASCII_USER_PROMPT = '⛇ '
+ASCII_CHATBOT_PROMPT = '☣ '
+
 def str2bool(v):
     if v.lower() in ('yes', 'true', 't', 'y', '1'):
         return True
@@ -14,10 +17,10 @@ def main():
     global args
     chatbot = Chatbot(args.reset) #the saves a state to resume from
     starter_prompt = chatbot.launch()
-    print(starter_prompt)
-    while (user_prompt := input()) != 'exit':
+    print(ASCII_CHATBOT_PROMPT + starter_prompt)
+    while (user_prompt := input(ASCII_USER_PROMPT)) != 'exit':
         response = chatbot.query(user_prompt)
-        print('\n', response)
+        print(ASCII_CHATBOT_PROMPT + response )
     chatbot.exit_routine()
     return 
 
