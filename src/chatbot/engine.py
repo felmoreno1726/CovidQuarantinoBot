@@ -9,7 +9,7 @@ from src.skills.interface import SkillInterface
 #class Chatbot(implements(SkillInterface)): ### Do we want to make the engine a skill?
 class Chatbot():
 
-    HELP_MESSAGE = "or just type anthing and press enter to chat with me."
+    HELP_MESSAGE = "or just type anything and press enter to chat with me."
 
     def __init__(self, reset, state_path="./state.json"):
         """
@@ -27,7 +27,7 @@ class Chatbot():
         else:
             #reloads state from left off json
             with open(state_path) as state:
-                state = json.load(state)
+                self.state = json.load(state)
             self.active_skill = None
 
     def launch(self):
@@ -45,10 +45,10 @@ class Chatbot():
         Lists available skills, invocation names and functionality of each.
         """
         message = "You can say: "
-        for skill_activation in skills.activations.keys():
-            message += skill_actication + ', '
+        for skill_invocation_name, skill_name in zip(skills.invocation_names.keys(), skills.names.keys()):
+            message += "'" + skill_invocation_name + "'"+ ' to trigger ' + skill_name + ', \n'
             #"\'Help me book a flight\', \`Covid testing\` to trigger some of my useful skills, "
-        message += HELP_MESSAGE
+        message += self.HELP_MESSAGE
         return message
 
     def query(self, prompt):
@@ -67,7 +67,7 @@ class Chatbot():
                 self.active_skill = None
         #no skill is active display help message for all available skills.
         elif prompt == 'help':
-            response = get_functionality()
+            response = self.get_functionality()
         elif (skill := skills.invocation_names.get(prompt)) is not None:
             self.active_skill = skill
             response = self.active_skill.launch(self.state)

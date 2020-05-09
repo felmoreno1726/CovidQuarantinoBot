@@ -15,7 +15,7 @@ def str2bool(v):
 
 def main():
     global args
-    chatbot = Chatbot(args.reset) #the saves a state to resume from
+    chatbot = Chatbot(args.reset) #saves a state to resume from
     starter_prompt = chatbot.launch()
     print(ASCII_CHATBOT_PROMPT + starter_prompt)
     while (user_prompt := input(ASCII_USER_PROMPT)) != 'exit':
