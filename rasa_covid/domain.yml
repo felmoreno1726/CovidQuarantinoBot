@@ -1,0 +1,47 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+entities:
+  - username
+
+slots:
+  username:
+    type: text
+
+responses:
+
+  utter_introduce:
+  - text: "Hi, I'm Covid Quarantino, your friendly chatbot. What is your name?"
+  - text: "Hey, I'm Covid Quarantino your chatbot agent. I will keep you company through this social distancing. May I know what is your name?"
+
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Hi, nice to meet you {username}. How are you?"
+  - text: "Hi, {username}. How is your day going?"
+  - text: "Nice to meet you {username}. How are things going?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a Covid Quarantino, a bot."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
