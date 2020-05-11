@@ -1,4 +1,5 @@
 intents:
+  - introduce
   - greet
   - goodbye
   - affirm
@@ -6,6 +7,8 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - positive
+  - negative
 
 entities:
   - username
@@ -41,6 +44,15 @@ responses:
 
   utter_iamabot:
   - text: "I am a Covid Quarantino, a bot."
+
+  utter_positive:
+  - text: "I'm glad that you think that."
+  - text: "Thanks."
+  - text: "Thank you."
+
+  utter_negative:
+  - text: "Sorry, I apologize for that."
+  - text: "I'm sorry."
 
 session_config:
   session_expiration_time: 60

@@ -51,6 +51,10 @@
 - I'm good
 
 ## intent:mood_unhappy
+- It's going bad.
+- It's pretty bad.
+- Not good.
+- My day has been a mess.
 - sad
 - very sad
 - unhappy
@@ -61,6 +65,25 @@
 - not very good
 - extremely sad
 - so sad
+
+## intent:positive
+- Awesome
+- Great
+- Lovely
+- Thank you
+- jajaja
+- hahaha
+- haha
+- Lol
+- LOL
+
+## intent:negative
+- Awful
+- I hate it
+- This is the worst
+- You are the worst
+- I hate you
+
 
 ## intent:bot_challenge
 - are you a bot?
