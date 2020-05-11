@@ -1,10 +1,10 @@
 ## intent:introduce
-- Hi, my name is [Felipe](username)
-- Hello, I'm [Richard](username)
-- I'm [Karen](username)
-- Hey, my name is [Kumar](username)
-- They call me [Carlos Gabriel Segundo](username)
-- Greetings, my name is [jilipollas123](username)
+- Hi, my name is [Felipe](PERSON)
+- Hello, I'm [Richard](PERSON)
+- I'm [Karen](PERSON)
+- Hey, my name is [Kumar](PERSON)
+- They call me [Carlos Gabriel Segundo](PERSON)
+- Greetings, my name is [jilipollas123](PERSON)
 
 ## intent:greet
 - Hey Covid
@@ -18,12 +18,6 @@
 - good morning
 - good evening
 - hey there
-
-## intent:goodbye
-- bye
-- goodbye
-- see you around
-- see you later
 
 ## intent:affirm
 - yes
@@ -90,3 +84,21 @@
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+
+## intent:story_tell
+- Tell me story
+- Can you tell me a story?
+- I want to know a story.
+- Narrate a tale
+- Say a narration
+- Do you have a tale?
+- Story time
+
+## intent:comedy_time
+- Tell me a joke.
+- Are you a comedian?
+- Prove yourself a comedian
+- Comedy time
+- Say somethig funny
+- I want to hear a joke
+

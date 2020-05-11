@@ -1,12 +1,14 @@
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
-language: en
+#
+language: "en_core_web_md"
+
 pipeline:
-  - name: WhitespaceTokenizer
-  - name: RegexFeaturizer
-  - name: LexicalSyntacticFeaturizer
-  - name: CountVectorsFeaturizer
-  - name: CountVectorsFeaturizer
+  - name: "SpacyNLP"
+  - name: "SpacyTokenizer"
+  - name: "SpacyFeaturizer"
+  - name: "SpacyEntityExtractor"
+  - name: "SklearnIntentClassifier"
     analyzer: "char_wb"
     min_ngram: 1
     max_ngram: 4

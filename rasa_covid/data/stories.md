@@ -1,6 +1,5 @@
 ## Greet already introduced
-* greet
-  - slot{"username":"name"}
+* greet{"PERSON":"name"}
   - utter_greet
 
 ## Introduction + greet + happy mood
@@ -40,10 +39,14 @@
 * negative
   - utter_negative
 
-## say goodbye
-* goodbye
-  - utter_goodbye
-
 ## bot challenge
 * bot_challenge
   - utter_iamabot
+
+## story tell
+* story_tell
+  - utter_story
+
+## comedy_time
+* comedy_time
+  - utter_joke
