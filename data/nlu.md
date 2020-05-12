@@ -8,6 +8,9 @@
 - My name is [Jordan](PERSON)
 - I'm [Daniel](PERSON)
 - [Douglas](PERSON)
+- [Felix](PERSON)
+- [Dora](PERSON)
+
 
 ## intent:greet
 - Hey Covid
@@ -82,21 +85,14 @@
 - LOL
 - lol
 
-## intent:positive
-- Awesome
-- Great
-- Lovely
-- Thank you
-- jajaja
-- hahaha
-- haha
-- Lol
-- LOL
-
 ## intent:negative_feedback
 - That is bad
 - I don't like it
 - Awful
+- This is awful
+- I hate this
+- You are a terrible bot
+- Your capabilities are really bac
 - I hate it
 - This is the worst
 - You are the worst
@@ -125,4 +121,24 @@
 - Comedy time
 - Say somethig funny
 - I want to hear a joke
+- Can you tell me a joke?
+- I would like to hear a joke
+- Do you have more jokes?
 
+## intent:help
+- help
+- Can you help me?
+- Is there help?
+- help message
+- help me
+- I need help
+
+## intent:covid_screen
+- Covid screening
+- Covid diagnosis
+- Give me a diagnosis for Covid-19
+- Diagnose me for Covid
+- Screen me for Covid-19
+- Covid-19 evaluation
+- Covid evaluation
+- Assesment for Covid-19

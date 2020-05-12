@@ -5,12 +5,14 @@ intents:
   - deny
   - mood_great
   - mood_unhappy
-  - positive
+  - positive_feedback
   - negative_feedback
   - bot_challenge
   - story_tell: {triggers: action_story_tell}
   - comedy_time: {triggers: action_comedy_time}
   - out_of_scope
+  - help
+  - covid_screen
 
 actions:
   - action_greet
@@ -18,17 +20,29 @@ actions:
   - action_story_tell
   - action_chitchat
 
+forms:
+  - screening_form
+
 entities:
   - PERSON
   - GPE
   - ORG
+  - NORP
 
 slots:
   PERSON:
     type: text
+    initial_value: "human"
+  q1_answer:
+    type: bool
+  q2_answer:
+    type: bool
+  q3_answer:
+    type: bool
+  q4_answer:
+    type: bool
 
 responses:
-
   utter_introduce:
   - text: "Hi, I'm Covid Quarantino, your friendly chatbot. If you would like to know about my different functionalities, you can ask for help. What is your name?"
   - text: "Hey, I'm Covid Quarantino your chatbot agent. I will keep you company through this social distancing. If you want to know my capabilities, you can ask for help. May I know what is your name?"
@@ -68,6 +82,33 @@ responses:
   - text: "Sorry, I apologize for that. I hope to be good company for you during the quarantine."
   - text: "I'm sorry. I hope I can still give you my company during this quarantine."
   - text: "I'm so sorry."
+
+  utter_help_message:
+  - text: "Currently my functionality includes telling jokes, screening for Covid-19 and chitchating."
+
+  utter_ask_q1_answer:
+  - text: "Have you traveled to China, Iran, South Korea, Italy or Japan any of these locations in the last 14 days?"
+  
+  utter_ask_q2_answer:
+  - text: "Have you had contact with anyone with confirmed COVID-19 in the last 14 days?"
+
+  utter_ask_q3_answer:
+  - text: "Have you had any of these symptons in the last 14 days? Fever greater thatn 100, difficulty breathing, cough"
+
+  utter_ask_q4_answer:
+  - text: "Are you currently experiencing fever over 100, difficulty breathing or cough?"
+
+  utter_medical_and_state_dept:
+  - text: "Please call your primary care provider or your State Department of Health for further direction."
+
+  utter_medical_visit_instructions:
+  - text: "Please do NOT visit a medical facility unless you are severely ill. Please call ahead and let any medical facility know why you are coming. Meanwhile, do not get close to anyone with a compromised immune system or other underlying condition."
+
+  utter_medical:
+  - text: "Please contact your healthcare provider if symptoms are severe."
+
+  utter_no_risk:
+  - text: "The questionaire is not fully comprehensive. Please consult your medical provider for any other symptoms that are severe or concerning to you."
 
 session_config:
   session_expiration_time: 60

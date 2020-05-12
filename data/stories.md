@@ -35,3 +35,17 @@
 * bot_challenge
   - utter_iamabot
 
+## help message
+* help
+  - utter_help_message
+
+## covid screening
+* covid_screen
+  - screening_form
+  - form{"name": "screening_form"}
+  - slot{"q1_answer": false}
+  - slot{"q2_answer": false}
+  - slot{"q3_answer": false}
+  - slot{"q4_answer": false}
+  - form{"name": null}
+
