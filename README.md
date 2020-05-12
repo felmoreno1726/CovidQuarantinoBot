@@ -8,4 +8,9 @@ Covid Quarantino is a skill extensible friendly general purpose chatbot to be en
 - To install dependencies run: ` pip install -r requirements.txt`
 
 # Running the chatbot
-- For usage run ` ./run.sh`
+### Training
+- Run ` rasa train`
+### Testing
+- Run `rasa test`
+### Usage
+- Run ` ./run.sh`
