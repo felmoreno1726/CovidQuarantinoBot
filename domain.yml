@@ -10,11 +10,13 @@ intents:
   - bot_challenge
   - story_tell: {triggers: action_story_tell}
   - comedy_time: {triggers: action_comedy_time}
+  - out_of_scope
 
 actions:
   - action_greet
   - action_comedy_time
   - action_story_tell
+  - action_chitchat
 
 entities:
   - PERSON

@@ -1,2 +1,5 @@
 wheel
-python-interface
+rasa
+spacy
+torch
+transformers

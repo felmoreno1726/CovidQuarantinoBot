@@ -1,22 +1,12 @@
+import logging
+import torch
+from transformers import AutoModelWithLMHead, AutoTokenizer
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import UserUtteranceReverted
 
 from utils.read_jokes import read_random_joke
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+
+logger = logging.Logger(__name__)
 
 class ActionGreetUser(Action):
     """
@@ -62,3 +52,32 @@ class ActionComedyTime(Action):
         joke = read_random_joke()
         dispatcher.utter_message(text=joke)
         return []
+
+
+# Chitchat model and tokenizer
+tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-large")
+model = AutoModelWithLMHead.from_pretrained("microsoft/DialoGPT-large")
+#initialize chitchat history
+chat_history_ids = None 
+
+class ActionDefault(Action):
+    """
+    This action feeds the user request to 
+    """
+    
+    def name(self):
+        return "action_chitchat"
+
+    def run(self, dispatcher, tracker, domain):
+        global tokenizer, model, chat_history_ids
+        user_utterance = tracker.latest_message["text"]
+        # encode the new user input, add the eos_token and return a tensor in Pytorch
+        new_user_input_ids = tokenizer.encode(user_utterance + tokenizer.eos_token, return_tensors='pt')
+        # append the new user input tokens to the chat history
+        bot_input_ids = torch.cat([chat_history_ids, new_user_input_ids], dim=-1) if chat_history_ids is not None else new_user_input_ids
+        # generated a response while limiting the total chat history to 1000 tokens
+        chat_history_ids = model.generate(bot_input_ids, max_length=1000, pad_token_id=tokenizer.eos_token_id)
+        response = tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
+        dispatcher.utter_message(text=response)
+        return [UserUtteranceReverted()]
+

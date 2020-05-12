@@ -21,11 +21,15 @@
 * deny
 
 ## positive remarks
-* positive
+* positive_feedback
   - utter_happy
 
 * negative_feedback
   - utter_apologies
+
+## Default 'chitchat' handler
+* out_of_scope
+  - action_chitchat
 
 ## bot challenge
 * bot_challenge

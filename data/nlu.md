@@ -72,6 +72,16 @@
 - extremely sad
 - so sad
 
+## intent:positive_feedback
+- You are awesome
+- That is awesome
+- What a lovely thing to say
+- hahaha thank you
+- jaja thanks
+- hahahahahaha
+- LOL
+- lol
+
 ## intent:positive
 - Awesome
 - Great

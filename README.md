@@ -6,6 +6,9 @@ Covid Quarantino is a skill extensible friendly general purpose chatbot to be en
 - To create a virtual environment with ` python3 -m venv venv`
 - To activate the virtual environment ` source venv/bin/activate`
 - To install dependencies run: ` pip install -r requirements.txt`
+- Install and link spacy models
+` python -m spacy download en_core_web_md `
+` python -m spacy link en_core_web_md en `
 
 # Running the chatbot
 ### Training
