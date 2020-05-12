@@ -1,0 +1,72 @@
+intents:
+  - introduce
+  - greet: {triggers: action_greet}
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - positive
+  - negative_feedback
+  - bot_challenge
+  - story_tell: {triggers: action_story_tell}
+  - comedy_time: {triggers: action_comedy_time}
+
+actions:
+  - action_greet
+  - action_comedy_time
+  - action_story_tell
+
+entities:
+  - PERSON
+  - GPE
+  - ORG
+
+slots:
+  PERSON:
+    type: text
+
+responses:
+
+  utter_introduce:
+  - text: "Hi, I'm Covid Quarantino, your friendly chatbot. If you would like to know about my different functionalities, you can ask for help. What is your name?"
+  - text: "Hey, I'm Covid Quarantino your chatbot agent. I will keep you company through this social distancing. If you want to know my capabilities, you can ask for help. May I know what is your name?"
+
+  utter_greet:
+  - text: "Hi, nice to meet you {PERSON}. How are you?"
+  - text: "Hi, {PERSON}. How is your day going?"
+  - text: "Nice to meet you {PERSON}. How are things going?"
+
+  greet_reprompt:
+  - text: "Hi {PERSON}."
+  - text: "Hey {PERSON}, welcome back."
+  - text: "Hello {PERSON}."
+
+  utter_cheer_up:
+  - text: "Would you like to hear a story or a joke?"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+  - text: "I'm glad!"
+  - text: "That is awesome"
+  - text: "That makes me happy."
+  - text: "I'm delighted that you feel that way."
+  - text: "I'm glad. I appreaciate to keep you company during this quarantine."
+  - text: "Thank you. I'm glad you feel positive with my company."
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a Covid Quarantino, your friendly quarantine companion bot."
+
+  utter_apologies:
+  - text: "Sorry, I apologize for that. I hope to be good company for you during the quarantine."
+  - text: "I'm sorry. I hope I can still give you my company during this quarantine."
+  - text: "I'm so sorry."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
