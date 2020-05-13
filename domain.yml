@@ -58,7 +58,7 @@ responses:
   - text: "Hello {PERSON}."
 
   utter_cheer_up:
-  - text: "Would you like to hear a story or a joke?"
+  - text: "Oh, I'm sorry. Would you like to hear a joke?"
 
   utter_did_that_help:
   - text: "Did that help you?"

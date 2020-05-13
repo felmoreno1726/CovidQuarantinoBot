@@ -105,17 +105,15 @@
 - am I talking to a bot?
 - am I talking to a human?
 
-## intent:story_tell
-- Tell me story
-- Can you tell me a story?
-- I want to know a story.
-- Narrate a tale
-- Say a narration
-- Do you have a tale?
-- Story time
-
 ## intent:comedy_time
 - Tell me a joke.
+- Can you tell me a joke?
+- Please, tell me a joke
+- Joke
+- Say a joke
+- Tell a joke
+- Comedy
+- Funny
 - Are you a comedian?
 - Prove yourself a comedian
 - Comedy time
