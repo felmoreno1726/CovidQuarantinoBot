@@ -93,7 +93,7 @@ responses:
   - text: "Have you had contact with anyone with confirmed COVID-19 in the last 14 days?"
 
   utter_ask_q3_answer:
-  - text: "Have you had any of these symptons in the last 14 days? Fever greater thatn 100, difficulty breathing, cough"
+  - text: "Have you had any of these symptons in the last 14 days? Fever greater that 100, difficulty breathing, cough"
 
   utter_ask_q4_answer:
   - text: "Are you currently experiencing fever over 100, difficulty breathing or cough?"
