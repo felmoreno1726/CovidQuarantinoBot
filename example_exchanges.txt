@@ -1,0 +1,28 @@
+Bot loaded. Type a message and press enter (use '/stop' to exit): 
+Your input ->  hi                                                                                                                                                        
+Hey, I'm Covid Quarantino your chatbot agent. I will keep you company through this social distancing. If you want to know my capabilities, you can ask for help. May I know what is your name?
+Your input ->  help                                                                                                                                                      
+Currently my functionality includes telling jokes, screening for Covid-19 and chitchating.
+Your input ->  Can you tell me a joke?                                                                                                                                   
+A man was arrested for hacking the powergrid from a skyscraper. His mother, in an exclusive interview said "its such a shame he had so much potential, but in his current situation I don't think he can do much. To be honest it re-volts- me that he did it, it makes me blow a fuse. I hope that he didn't put up too much resistance, and the trial will be conducted properly."
+He will be charged in court tommorow.
+Your input ->  What is the meaning of life?                                                                                                                              
+To be a good boy.
+Your input ->  you are a bad boy                                                                                                                                         
+You are awful
+Your input ->  I hate you                                                                                                                                                
+I'm sorry. I hope I can still give you my company during this quarantine.
+Your input ->  What have you been doing in quarantine?                                                                                                                   
+I'm not sure.
+Your input ->  Covid Screening                                                                                                                                           
+Have you traveled to China, Iran, South Korea, Italy or Japan any of these locations in the last 14 days?
+Your input ->  no                                                                                                                                                        
+Have you had contact with anyone with confirmed COVID-19 in the last 14 days?
+Your input ->  no                                                                                                                                                        
+Have you had any of these symptons in the last 14 days? Fever greater that 100, difficulty breathing, cough
+Your input ->  yes                                                                                                                                                       
+Are you currently experiencing fever over 100, difficulty breathing or cough?
+Your input ->  yes                                                                                                                                                       
+Please contact your healthcare provider if symptoms are severe.
+Please do NOT visit a medical facility unless you are severely ill. Please call ahead and let any medical facility know why you are coming. Meanwhile, do not get close to anyone with a compromised immune system or other underlying condition.
+
