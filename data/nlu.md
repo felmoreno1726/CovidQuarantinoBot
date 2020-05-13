@@ -32,22 +32,28 @@
 - that sounds good
 - correct
 - ye
+- yeh
 - uh yes
 - let's dot it
 - that is correct
 - right
 - yea
+- yeah
 - right on
+- please
+- yes, please
 
 ## intent:deny
 - no
 - never
 - I don't think so
-- don't like that
+- I do not think so
 - no way
 - not really
 - nah
-- No, I don't
+- Don't
+- Do not
+- I do not
 
 ## intent:mood_great
 - perfect
@@ -58,10 +64,13 @@
 - I am feeling very good
 - I am great
 - I'm good
+- I am good
 
 ## intent:mood_unhappy
 - It's going bad
+- It is bad
 - It's pretty bad
+- It is pretty bad
 - Not good
 - My day has been a mess
 - sad
@@ -74,10 +83,25 @@
 - not very good
 - extremely sad
 - so sad
+- It is sad
+- It is going sad
+- I feel sad
+- I feel bad
+- I fell terrible
+- I feel unhappy
+- I don't feel good
+- I do not feel good
+- I am unahppy
+- I'm unhappy
 
 ## intent:positive_feedback
 - You are awesome
 - That is awesome
+- You are great
+- I love you
+- You are a beautiful bot
+- You are an amazing bot
+- You are amazing
 - What a lovely thing to say
 - hahaha thank you
 - jaja thanks
@@ -92,17 +116,22 @@
 - This is awful
 - I hate this
 - You are a terrible bot
-- Your capabilities are really bac
+- Your capabilities are really bad
 - I hate it
 - This is the worst
 - You are the worst
 - I hate you
+- You are a terrible bot
+- Terrible service
+
 
 
 ## intent:bot_challenge
 - are you a bot?
+- are you a chatbot?
 - are you a human?
 - am I talking to a bot?
+- am I talking to a chatbot?
 - am I talking to a human?
 
 ## intent:comedy_time
@@ -130,13 +159,26 @@
 - help message
 - help me
 - I need help
+- Please, help me
+- Please help
 
 ## intent:covid_screen
 - Covid screening
+- Covid-19 screening
 - Covid diagnosis
+- Covid-19 diagnosis
 - Give me a diagnosis for Covid-19
 - Diagnose me for Covid
+- Diagnose me for Covid-19
+- Test me for Covid
+- Test me for Covid-19
 - Screen me for Covid-19
 - Covid-19 evaluation
 - Covid evaluation
 - Assesment for Covid-19
+- Can you screen me for Covid?
+- Can you scren me for Covid-19?
+- Can you test me for Covid?
+- Can you test me for Covid-19?
+- Can you diagnose me with Covid?
+- Can you diagnose me for Covid-19?

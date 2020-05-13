@@ -72,9 +72,6 @@ responses:
   - text: "I'm glad. I appreaciate to keep you company during this quarantine."
   - text: "Thank you. I'm glad you feel positive with my company."
 
-  utter_goodbye:
-  - text: "Bye"
-
   utter_iamabot:
   - text: "I am a Covid Quarantino, your friendly quarantine companion bot."
 
