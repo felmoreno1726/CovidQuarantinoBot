@@ -1,0 +1,45 @@
+2020-05-12 22:59:25 INFO     rasa.core.test  - Evaluation Results on END-TO-END level:                                                                           [42/146]
+2020-05-12 22:59:25 INFO     rasa.core.test  -  Correct:          4 / 17                                                                                                 
+2020-05-12 22:59:25 INFO     rasa.core.test  -  F1-Score:         0.381                                                                                                  
+2020-05-12 22:59:25 INFO     rasa.core.test  -  Precision:        1.000                                                                                                  
+2020-05-12 22:59:25 INFO     rasa.core.test  -  Accuracy:         0.235                                                                                                  
+2020-05-12 22:59:25 INFO     rasa.core.test  -  In-data fraction: 0.232                                                                                                  
+2020-05-12 22:59:25 INFO     rasa.core.test  - Evaluation Results on ACTION level:                                                                                       
+2020-05-12 22:59:25 INFO     rasa.core.test  -  Correct:          41 / 56                                                                                                
+2020-05-12 22:59:25 INFO     rasa.core.test  -  F1-Score:         0.741                                                                                                  
+2020-05-12 22:59:25 INFO     rasa.core.test  -  Precision:        0.773                                                                                                  
+2020-05-12 22:59:25 INFO     rasa.core.test  -  Accuracy:         0.747                                                                                                  
+2020-05-12 22:59:25 INFO     rasa.core.test  -  In-data fraction: 0.232                                                                                                  
+2020-05-12 22:59:25 INFO     rasa.core.test  -  Classification report:                                                                                                   
+                     precision    recall  f1-score   support                                                                                                             
+                                                                                                                                                                         
+    action_chitchat       0.22      1.00      0.36         2                                                                                                             
+               None       0.00      0.00      0.00         3                                                                                                             
+               deny       0.67      1.00      0.80         2                                                                                                             
+     utter_cheer_up       1.00      0.75      0.86         4                                                                                                             
+       out_of_scope       0.00      0.00      0.00         2                                                                                                             
+ utter_help_message       1.00      1.00      1.00         2                                                                                                             
+               help       1.00      1.00      1.00         2                                                                                                             
+              greet       1.00      1.00      1.00         6                                                                                                             
+utter_did_that_help       1.00      0.50      0.67         2                                                                                                             
+      utter_goodbye       0.00      0.00      0.00         1
+       uttter_happy       0.00      0.00      0.00         1
+        utter_happy       1.00      0.67      0.80         3
+        utter_greet       0.00      0.00      0.00         6
+      utter_iamabot       1.00      1.00      1.00         1
+       mood_unhappy       0.80      1.00      0.89         4
+       covid_screen       0.50      1.00      0.67         2
+      action_listen       0.96      0.93      0.95        28
+  negative_feedback       1.00      0.50      0.67         2
+    utter_apologies       1.00      0.50      0.67         2
+     screening_form       0.67      1.00      0.80         2
+             affirm       1.00      1.00      1.00         2
+       utter_iambot       0.00      0.00      0.00         1
+  positive_feedback       1.00      0.50      0.67         2
+         mood_great       1.00      1.00      1.00         2
+      bot_challenge       1.00      1.00      1.00         2
+ action_comedy_time       1.00      1.00      1.00         1
+
+          micro avg       0.83      0.75      0.79        87
+          macro avg       0.69      0.67      0.65        87
+       weighted avg       0.77      0.75      0.74        87
