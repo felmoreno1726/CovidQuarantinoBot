@@ -1,6 +1,8 @@
 # CovidQuarantinoBot
 ## Description
 Covid Quarantino is a skill extensible friendly general purpose chatbot to be entertained with this quarantine.
+## Results
+See [report.pdf](results/acl_style_main.pdf) 
 # Dependencies
 #### Requires python >=3.6. Make sure that you have the latest version of pip installed
 - To create a virtual environment with ` python3 -m venv venv`
